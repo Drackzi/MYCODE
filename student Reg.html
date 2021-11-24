@@ -5,7 +5,6 @@
 		<meta charset = "utf-8">
 		<link rel="stylesheet" href="bootstrap.css">
 		<link rel="stylesheet" href="student.css">
-    <script src="bootstrap.js"></script>
 	</head>
 
 	<body>
@@ -18,28 +17,31 @@
                 <h2 class="text-left">Sign Up</h2>
                 <h5 class="text-left">Please fill in this form to create an account</h5>
                 <hr></hr>
-                <form id="needs-validation">
+                <form name="form " onsubmit="return validateForm()" method="post">
                   <div class="row">
+                    <div class="col-12 form-group">
+                      <input type="text" class="form-control alert-warning btn-warning" id="_error" placeholder="Please fill up all the neccessary information" disabled>
+                    </div>
                     <div class="col-6 form-group">
-                      <input type="text" class="form-control" placeholder="First Name">
+                      <input type="text" class="form-control" name="firstname" id="fname" placeholder="First Name">
                     </div>
                     <div class="col-6 form-group">
-                      <input type="text" class="form-control" placeholder="Last Name">
+                      <input type="text" class="form-control" name="lastname" id="lname" placeholder="Last Name">
                     </div>
                     <div class="col-12 form-group">
-                      <input type="text" class="form-control" placeholder="Email">
+                      <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                     </div>
                     <div class="col-12 form-group">
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                     </div>
                     <div class="col-12 form-group">
-                      <input type="password" class="form-control" placeholder="Confirm Password">
+                      <input type="password" class="form-control" id="confirm" name="cp" placeholder="Confirm Password">
                     </div>
                     <div class="col-12 form-group">
                       <input type="checkbox" class=""> I accept the <a href=""> Terms of Use </a>& <a href="">Privacy Policy</a>
                     </div>
                     <div class="col-12 form-group">
-                      <input type="submit" class="btn btn-primary" >
+                      <input type="submit" value="Submit" class="btn btn-primary" >
                     </div>
                   </div>
                 </form>
@@ -50,5 +52,6 @@
         <div class="text-white text-center">Already have an account? <a href="" class="text-white">Login here</a></div>
       </div>
     </div>
+    <script src="student.js"></script>
 	</body>
 </html>
